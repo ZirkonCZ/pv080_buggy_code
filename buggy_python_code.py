@@ -2,7 +2,6 @@ import sys
 import os
 import yaml
 import flask
-import docstring
 
 app = flask.Flask(__name__)
 
@@ -55,7 +54,7 @@ if __name__ == '__main__':
     choice = input("Select vulnerability: ")
     if choice == "1": 
         new_person = Person("Vickie")  
-        print_nametag(input("Please format your nametag: "), new_person)
+        print_nametag(input("Please format your nametag: "), str(new_person))
     elif choice == "2":
         urlib_version = input("Choose version of urllib: ")
         fetch_website(urlib_version, url="https://www.google.com")
